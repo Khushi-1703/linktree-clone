@@ -1,36 +1,153 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌳 Bittree — Linktree Clone (Next.js + MongoDB)
 
-## Getting Started
+A modern **Linktree clone** built with **Next.js, MongoDB, and Tailwind CSS** that lets users create a personalized page to showcase all their important links in one place.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+* 🔗 Create a custom handle (e.g. `/khushi`)
+* 🧩 Add multiple links with custom titles
+* 🖼️ Add profile picture and description
+* 🌐 Dynamic public profile pages
+* ⚡ Fast and responsive UI
+* 🔒 Backend validation & error handling
+* 📦 MongoDB integration for data storage
+
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend:** Next.js (App Router), React
+* **Styling:** Tailwind CSS
+* **Backend:** Next.js API Routes
+* **Database:** MongoDB
+* **Notifications:** React Toastify
+
+---
+
+## 📂 Project Structure
+
+```
+/app
+  ├── page.js              # Homepage
+  ├── generate/page.js     # Create Bittree page
+  ├── [handle]/page.js     # Dynamic user page
+
+/api
+  └── add/route.js         # API to create Bittree
+
+/lib
+  └── mongodb.js           # MongoDB connection
+
+/components
+  └── Navbar.js           # Navbar component
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the repo
+
+```bash
+git clone https://github.com/your-username/bittree.git
+cd bittree
+```
+
+---
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+### 3️⃣ Setup environment variables
+
+Create a `.env.local` file in the root:
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+```
+
+---
+
+### 4️⃣ Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Now open 👉 http://localhost:3000
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧠 How it works
 
-## Learn More
+1. User enters a handle on homepage
+2. Redirects to `/generate`
+3. User adds:
 
-To learn more about Next.js, take a look at the following resources:
+   * Links
+   * Profile picture
+   * Description
+4. Data is sent to `/api/add`
+5. Stored in MongoDB
+6. Public page generated at:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ⚠️ Important Notes
 
-## Deploy on Vercel
+* Handles must be **unique**
+* Links are validated before saving
+* Empty or invalid data is rejected
+* Uses optimized Next.js Image component
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔮 Future Improvements
+
+* 🔐 Authentication (Login/Signup)
+* 🎨 Theme customization
+* 📊 Analytics (click tracking)
+* ✏️ Edit/Delete links
+* 🌍 Custom domains
+* 📱 Mobile UI enhancements
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repo
+2. Create a new branch
+3. Make your changes
+4. Submit a pull request
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 💡 Inspiration
+
+Inspired by **Linktree**, built as a learning + portfolio project.
+
+---
+
+## 👨‍💻 Author
+
+Made with ❤️ by **Khushi**
+
+---
+
+⭐ If you like this project, give it a star!
