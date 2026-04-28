@@ -99,7 +99,10 @@ Now open 👉 http://localhost:3000
 6. Public page generated at:
 
 ```
+/your-handle
 ```
+
+---
 
 ## ⚠️ Important Notes
 
